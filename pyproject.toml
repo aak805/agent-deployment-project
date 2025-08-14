@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langgraph-agent-deployment"
+version = "0.1.0"
+authors = [
+  { name="Ahmad Arsalan Khateeb", email="ahmadarsalan.khateeb@gmail.com" },
+]
+description = "A prototyype of deplyment of a langgraph agent."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "langchain",
+    "langgraph",
+    "langchain_google_genai",
+    "python-dotenv",
+    "pytz"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
