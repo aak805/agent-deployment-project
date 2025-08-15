@@ -19,8 +19,24 @@ dependencies = [
     "langgraph",
     "langchain_google_genai",
     "python-dotenv",
-    "pytz"
+    "ipykernel",
+    "google",
+    "ruff",
+    "mypy",
 ]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
+
+[tool.ruff]
+line-length = 120
+exclude = [".git", "__pycache__", "docs", "venv", "build", "dist"]
+select = ["E", "W", "F", "C", "N", "D"]
+ignore = ["E203", "E501"]
+
+[tool.mypy]
+strict = true
+disallow_untyped_defs = true
+warn_return_any = true
+ignore_missing_imports = false
+exclude = ['setup.py', 'docs', 'venv']
