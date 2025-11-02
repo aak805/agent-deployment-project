@@ -15,6 +15,7 @@ dependencies = [
     "fastapi",
     "fastapi[standard]",
     "uvicorn[standard]",
+    "uvicorn",
     "pydantic",
     "langchain",
     "langgraph",

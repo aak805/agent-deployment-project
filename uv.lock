@@ -1047,6 +1047,7 @@ requires-dist = [
     { name = "pydantic" },
     { name = "python-dotenv" },
     { name = "ruff" },
+    { name = "uvicorn" },
     { name = "uvicorn", extras = ["standard"] },
 ]
 
